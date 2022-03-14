@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PeopleList from './PeopleList';
+import SearchInput from './Searchinput';
  
 export default function App() {
+
+    const [search_term, setSearchTerm] = useState('');
+
     return (
-        <h1>This is the App component</h1>
+        <div className="people-of-interest">
+            <h1>People of ineterest</h1>
+
+            <SearchInput 
+                search_term={ search_term}
+                setSearchTerm={ setSearchTerm}
+            />
+
+            <PeopleList 
+                search_term={ search_term} 
+            />
+        </div>
     )
 }
