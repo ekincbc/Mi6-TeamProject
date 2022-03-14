@@ -9,7 +9,7 @@ use App\Models\Person;
 
 class Image extends Model
 {
-    public function image()
+    public function person()
         {
             return $this->hasOne(Person::class);
         }
