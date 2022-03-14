@@ -11,7 +11,7 @@ class Alias extends Model
 {
     use HasFactory;
     
-        public function alias()
+        public function person()
 
         {
             return $this->belongsTo(Person::class);
