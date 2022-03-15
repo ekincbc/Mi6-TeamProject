@@ -13,12 +13,17 @@ class PeopleController extends Controller
     {   
         // get the search term from the request
         $search_term = $request->input('search');
+        $status = $request->input('status');
 
         $query = Person::query();
 
         if ($search_term !== null) {
             // WHERE `name` LIKE 'james%'
             $query->where('name', 'like', $search_term . '%');
+        }
+
+        if ($status !== null) {
+            $query->where('status_id', $status);
         }
 
         $people = $query
