@@ -47,3 +47,4 @@ mix
 // mix.js('resources/js/app.js', 'public/js').react();
 
 mix.js('resources/js/people-of-interest.js', 'public/js').react();
+mix.js('resources/js/missions.js', 'public/js').react();
